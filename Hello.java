@@ -18,4 +18,3 @@ public class Hello				// create a class (a program) called Hello
 
        }						// end the method
 }						// end the class
-
