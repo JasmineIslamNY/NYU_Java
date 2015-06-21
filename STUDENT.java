@@ -22,14 +22,6 @@ public class STUDENT
 	private 	String 		emergencyName;
 	private 	String 		emergencyNumber;	
 
-	/** 
-	Method printArray takes in a string array and prints out each item in a separate line.
-	Method also converts the array to a String object and prints that out.  
-	@author 	Jasmine Islam
-	@param 	array1 String array
-	@return	void	no return for this method 
-	*/
-
 	public int getClassNumber()
 	{
 		return (classNumber);
@@ -174,15 +166,15 @@ public class STUDENT
 
 	STUDENT (String fname, String lname)
 	{
-		firstname 	= 	fname;
-		lastname	= 	lname;
+		firstName 	= 	fname;
+		lastName	= 	lname;
 		studentCount 	+= 	1;
-		studentID 	= 	studentCount+999
+		studentID 	= 	studentCount+999;
 	}
 
 	STUDENT (String firstName, String lastName, String address, String city, String state, String email, String phone, String emergencyName, String emergencyNumber) 
 	{
-		this(firstname, lastname);
+		this(firstName, lastName);
 		this.address 		= address;
 		this.city 		= city;
 		this. state 		= state;
@@ -190,78 +182,35 @@ public class STUDENT
 		this. phone 		= phone;
 		this.emergencyName 	= emergencyName;
 		this. emergencyNumber 	= emergencyNumber;
-
 	}
 
 
-
-	Public String toString()
+	public String toString()
 	{
-		System.out.print("classNumber: "+classNumber+" 
-		className: "+ className +
-		" instructor: "+ instructor +
-		" studentCount: "+ studentCount +
-		" studentID: "+ studentID +
-		" firstName: "+ firstName +
-		" lastName: "+ lastName +
-		" address: "+ address +
-		"city: "+ city +
-		" "state: "+ state +
-		" email: "+ email +
-		" phone: "+ phone +
-		" emergencyName: "+ emergencyName +
-		" emergencyNumber: "+ emergencyNumber);	
-	}
-	
-
-
-
-
-
-
-
-
-
-
-
-    static void printArray(String [] array1)    
-    {
-
-	
-	
-	String converted = "";
-	for (String elems : array1)
-	{
-		System.out.println(elems); //loops through array1 and prints out each String element
-		converted += elems +" ";
-	}
-	System.out.println(converted); 
-	System.out.println("");
-    }
-
-    static String [] sortArray(String [] array2) 
-    {
-
-	/** 
-	Method sortArray takes in a string array and sorts it using compareTo method. 
-	@author 		Jasmine Islam
-	@param 	array2 		String array
-	@return	String [] 	Sorted array
-	*/
+		String data =
+		"Class Number: "+ classNumber + "\n" +
+		"Class Name: "+ className + "\n" +
+		"Instructor: "+ instructor + "\n" +
+		"Student Count: "+ studentCount + "\n" +
+		"Student ID: "+ studentID + "\n" +
+		"First Name: "+ firstName + "\n" +
+		"Last Name: "+ lastName + "\n" +
+		"Address: "+ address + "\n" +
+		"City: "+ city + "\n" +
+		"State: "+ state + "\n" +
+		"Email: "+ email + "\n" +
+		"Phone: "+ phone + "\n" +
+		"Emergency Name: "+ emergencyName + "\n" +
+		"Emergency Number: "+ emergencyNumber + "\n";
 		
-	for (int i = 0; i < array2.length; i++)
-	{
-		for (int j = i+1; j < array2.length; j++)
-		{
-			if (array2[i].compareTo(array2[j]) > 0)		//if should ignore case, use compareToIgnoreCase 
-			{
-				String temp = array2[i];
-				array2[i] = array2[j];
-				array2[j] = temp;
-			}
-		}	
+		return (data);	
 	}
-	return array2;
+	
 
-    }
+	public static void main(String[] args)
+	{
+		STUDENT test = new STUDENT("Jasmine", "Islam");
+		System.out.print(test);
+	}
+
 }
