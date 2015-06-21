@@ -205,12 +205,5 @@ public class STUDENT
 		
 		return (data);	
 	}
-	
-
-	public static void main(String[] args)
-	{
-		STUDENT test = new STUDENT("Jasmine", "Islam");
-		System.out.print(test);
-	}
 
 }
