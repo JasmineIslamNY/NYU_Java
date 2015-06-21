@@ -3,8 +3,6 @@
 // Homework for Section 5                     
 //*****************************************************************************
 
-//import  java.util.Arrays;
-
 public class STUDENT	
 {
 	private static 	int 		classNumber = 9226;
@@ -55,22 +53,16 @@ public class STUDENT
 	{
 		return (studentCount);
 	}
-	/** don't want the ability to set studentNumber
-	public void setStudentCount(int number)
-	{
-		studentCount = number;
-	} 
-	*/
+	// don't want the ability to set studentCount
+
 
 
 	public int getStudentID()
 	{
 		return (studentID);
 	}
-	public void setStudentID(int number)
-	{
-		studentID = number;
-	}
+	// don't want the ability to set studentID
+
 
 
 	public String getFirstName()
@@ -187,6 +179,7 @@ public class STUDENT
 
 	public String toString()
 	{
+		/** Prefer this but too hard to see in print
 		String data =
 		"Class Number: "+ classNumber + "\n" +
 		"Class Name: "+ className + "\n" +
@@ -202,7 +195,23 @@ public class STUDENT
 		"Phone: "+ phone + "\n" +
 		"Emergency Name: "+ emergencyName + "\n" +
 		"Emergency Number: "+ emergencyNumber + "\n";
-		
+		*/
+
+		String data =
+		"Class Number: "+ classNumber + "\t" +
+		"Class Name: "+ className + "\t" +
+		"Instructor: "+ instructor + "\t" +
+		"Student Count: "+ studentCount + "\t" +
+		"Student ID: "+ studentID + "\t" + 
+		"First Name: "+ firstName + "\t" + 
+		"Last Name: "+ lastName + "\t" + 
+		"Address: "+ address + "\t" + 
+		"City: "+ city + "\t" + 
+		"State: "+ state + "\t" +
+		"Email: "+ email + "\t" + 
+		"Phone: "+ phone + "\t" + 
+		"Emergency Name: "+ emergencyName + "\t" + 
+		"Emergency Number: "+ emergencyNumber + "\n";
 		return (data);	
 	}
 
