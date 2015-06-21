@@ -40,103 +40,134 @@ public class STUDENT
 	}
 
 
-	public int getClassNumber()
+	public String getClassName()
 	{
-		return (classNumber);
+		return (className);
 	}
-	public void setClassNumber(int number)
+	public void setClassName(String text)
 	{
-		classNumber = number;
-	}
-
-
-	public int getClassNumber()
-	{
-		return (classNumber);
-	}
-	public void setClassNumber(int number)
-	{
-		classNumber = number;
+		className = text;
 	}
 
 
-	public int getClassNumber()
+	public String getInstructor()
 	{
-		return (classNumber);
+		return (instructor);
 	}
-	public void setClassNumber(int number)
+	public void setInstructor(String text)
 	{
-		classNumber = number;
+		instructor = text;
+	}
+
+	public int getStudentCount()
+	{
+		return (studentCount);
+	}
+	/** don't want the ability to set studentNumber
+	public void setStudentCount(int number)
+	{
+		studentCount = number;
+	} 
+	*/
+
+
+	public int getStudentID()
+	{
+		return (studentID);
+	}
+	public void setStudentID(int number)
+	{
+		studentID = number;
 	}
 
 
-	public int getClassNumber()
+	public String getFirstName()
 	{
-		return (classNumber);
+		return (firstName);
 	}
-	public void setClassNumber(int number)
+	public void setFirstName(String text)
 	{
-		classNumber = number;
-	}
-
-
-	public int getClassNumber()
-	{
-		return (classNumber);
-	}
-	public void setClassNumber(int number)
-	{
-		classNumber = number;
+		firstName = text;
 	}
 
 
-	public int getClassNumber()
+	public String getLastName()
 	{
-		return (classNumber);
+		return (lastName);
 	}
-	public void setClassNumber(int number)
+	public void setLastName(String text)
 	{
-		classNumber = number;
-	}
-
-
-	public int getClassNumber()
-	{
-		return (classNumber);
-	}
-	public void setClassNumber(int number)
-	{
-		classNumber = number;
+		lastName = text;
 	}
 
 
-	public int getClassNumber()
+	public String getAddress()
 	{
-		return (classNumber);
+		return (address);
 	}
-	public void setClassNumber(int number)
+	public void setAddress(String text)
 	{
-		classNumber = number;
-	}
-
-
-	public int getClassNumber()
-	{
-		return (classNumber);
-	}
-	public void setClassNumber(int number)
-	{
-		classNumber = number;
+		address = text;
 	}
 
 
-	public int getClassNumber()
+	public String getCity()
 	{
-		return (classNumber);
+		return (city);
 	}
-	public void setClassNumber(int number)
+	public void setCity(String text)
 	{
-		classNumber = number;
+		city = text;
+	}
+
+
+	public String getState()
+	{
+		return (state);
+	}
+	public void setState(String text)
+	{
+		state = text;
+	}
+
+
+	public String getEmail()
+	{
+		return (email);
+	}
+	public void setEmail(String text)
+	{
+		email = text;
+	}
+
+
+	public String getPhone()
+	{
+		return (phone);
+	}
+	public void setPhone(String text)
+	{
+		phone = text;
+	}
+
+
+	public String getEmergencyName()
+	{
+		return (emergencyName);
+	}
+	public void setEmergencyName(String text)
+	{
+		emergencyName = text;
+	}
+
+
+	public String getEmergencyNumber()
+	{
+		return (emergencyNumber);
+	}
+	public void setEmergencyNumber(String text)
+	{
+		emergencyNumber = text;
 	}
 
 
