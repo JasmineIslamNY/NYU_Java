@@ -18,11 +18,11 @@ public class STUDENT_UI
 		STUDENT five = new STUDENT("Jane", "Walker", "731 Lexington Ave", "New York", "NY", "walker@texasranger.com", "646-897-4533", "Bob Tompkins", "347-412-1234");
 
 		System.out.println("Print the five students before changes:");
-		System.out.println(one);
-		System.out.println(two);
-		System.out.println(three);
-		System.out.println(four);
-		System.out.println(five);
+		System.out.println(one.toString());
+		System.out.println(two.toString());
+		System.out.println(three.toString());
+		System.out.println(four.toString());
+		System.out.println(five.toString());
 
 		System.out.println("Display and change Class Name:");
 		System.out.println(one.getClassName());
