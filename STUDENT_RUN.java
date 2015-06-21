@@ -1,15 +1,15 @@
 //*****************************************************************************
 // Name: Jasmine Islam 
-// Homework for Section 4                      
+// Homework for Section 5                     
 //*****************************************************************************
 
-import  java.util.Arrays;
-public class HW4	
+//import  java.util.Arrays;
+public class STUDENT	
 {
     public static void main(String[] args) 
     {	
 	System.out.println("Name: Jasmine Islam");
-	System.out.println("Homework: 4");
+	System.out.println("Homework: 5");
 	System.out.println("");
 
 	if (args.length < 3)
