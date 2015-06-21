@@ -172,10 +172,19 @@ public class STUDENT
 
 
 
+	STUDENT (String fname, String lname)
+	{
+		firstname = fname;
+		lastname = lname;
+		studentCount += 1
+		studentID = studentCount+999
+	}
 
-
-
-
+	STUDENT (String firstName, String lastName, String address, String city, String state, String email, String phone, String emergencyName, String emergencyNumber) 
+	{
+		this(firstname, lastname);
+		
+	}
 
 
 
