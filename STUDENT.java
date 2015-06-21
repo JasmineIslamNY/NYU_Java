@@ -7,20 +7,20 @@
 
 public class STUDENT	
 {
-	private static int classNumber = 9226;
-	private static String className = "Java 2 Week Summer Intensive";
-	private static String instructor = "Sam Sultan";
-	private static int studentCount = 0;
-	private int studentID;
-	private String firstName;
-	private String lastName;
-	private String address;
-	private String city;
-	private String state;
-	private String email;
-	private String phone;
-	private String emergencyName;
-	private String emergencyNumber;	
+	private static 	int 		classNumber = 9226;
+	private static 	String 		className = "Java 2 Week Summer Intensive";
+	private static 	String 		instructor = "Sam Sultan";
+	private static 	int 		studentCount = 0;
+	private 	int 		studentID;
+	private 	String 		firstName;
+	private 	String 		lastName;
+	private 	String 		address;
+	private 	String 		city;
+	private 	String 		state;
+	private 	String 		email;
+	private 	String 		phone;
+	private 	String 		emergencyName;
+	private 	String 		emergencyNumber;	
 
 	/** 
 	Method printArray takes in a string array and prints out each item in a separate line.
@@ -174,21 +174,45 @@ public class STUDENT
 
 	STUDENT (String fname, String lname)
 	{
-		firstname = fname;
-		lastname = lname;
-		studentCount += 1
-		studentID = studentCount+999
+		firstname 	= 	fname;
+		lastname	= 	lname;
+		studentCount 	+= 	1;
+		studentID 	= 	studentCount+999
 	}
 
 	STUDENT (String firstName, String lastName, String address, String city, String state, String email, String phone, String emergencyName, String emergencyNumber) 
 	{
 		this(firstname, lastname);
-		
+		this.address 		= address;
+		this.city 		= city;
+		this. state 		= state;
+		this. email 		= email;
+		this. phone 		= phone;
+		this.emergencyName 	= emergencyName;
+		this. emergencyNumber 	= emergencyNumber;
+
 	}
 
 
 
-
+	Public String toString()
+	{
+		System.out.print("classNumber: "+classNumber+" 
+		className: "+ className +
+		" instructor: "+ instructor +
+		" studentCount: "+ studentCount +
+		" studentID: "+ studentID +
+		" firstName: "+ firstName +
+		" lastName: "+ lastName +
+		" address: "+ address +
+		"city: "+ city +
+		" "state: "+ state +
+		" email: "+ email +
+		" phone: "+ phone +
+		" emergencyName: "+ emergencyName +
+		" emergencyNumber: "+ emergencyNumber);	
+	}
+	
 
 
 
