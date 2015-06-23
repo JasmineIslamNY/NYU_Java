@@ -11,7 +11,7 @@ class Address_Data
 	{
 		try 
 		{
-			File inFile = new File("./address_database.txt"); 	
+			File inFile = new File("./addrbook"); 	
 			FileReader openFile  = new FileReader(inFile); 	
 			BufferedReader inBuffer  = new BufferedReader(openFile);				//buffer the input
 			
