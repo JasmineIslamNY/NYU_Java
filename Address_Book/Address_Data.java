@@ -3,7 +3,9 @@ import java.util.*;
 
 class Address_Data
 {
-	private String [][] address;
+	private	String [][]	address;
+	private	int 		addrBookSize	=	0;
+	private	int 		addrRecordSize	=	7;
 	
 	Address_Data()
 	{
@@ -15,8 +17,7 @@ class Address_Data
 			
 			int size = (int) inFile.length();
 			String [] temp_address = new String[size];
-		
-			int i = 0;		
+				
 			while(true)
 			{
 				String input = inBuffer.readLine();		
@@ -24,20 +25,20 @@ class Address_Data
 				if (input == null)				
 					break;
 		
-				temp_address[i++] = input;				
+				temp_address[addrBookSize++] = input;				
 			}
 			openFile.close();
 			
 			//copy temp array to final array while breaking apart each record into it's own array
 			
-			address = new String[i][7];
+			address = new String[addrBookSize][addrRecordSize];
 			int j = 0;
 			for (String record : temp_address)
 			{
 				if (record == null)
 					break;
 				String[] words = record.split(",");
-				for (int k=0; k<=6; k++)
+				for (int k=0; k<addrRecordSize; k++)
 				{
 					address[j][k] = words[k];
 				} 
@@ -67,8 +68,6 @@ class Address_Data
 		{
 			text+= Arrays.toString(data) + "\n";
 		}
-		//String [] data = Arrays.toString(address);
-		//String data2 = Arrays.toString(data);
 		return (text);
 	}
 	
