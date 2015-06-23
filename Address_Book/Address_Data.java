@@ -60,6 +60,16 @@ class Address_Data
 	{
 		return (address);
 	}
+
+	public int getAddrBookSize()
+	{
+		return (addrBookSize);
+	}
+
+	public int getAddrRecordSize()
+	{
+		return (addrRecordSize);
+	}
 		
 	public String toString()
 	{	
