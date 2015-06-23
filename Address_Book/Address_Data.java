@@ -61,9 +61,15 @@ class Address_Data
 	}
 		
 	public String toString()
-	{
-		String data = Arrays.toString(address);
-		return (data);
+	{	
+		String text = new String("");
+		for (String [] data : address)
+		{
+			text+= Arrays.toString(data) + "\n";
+		}
+		//String [] data = Arrays.toString(address);
+		//String data2 = Arrays.toString(data);
+		return (text);
 	}
 	
 }
