@@ -4,50 +4,82 @@ import java.util.*;
 
 class Address_Data
 {
-	private String [] address;
+	private	String [][]	address;
+	private	int 		addrBookSize	=	0;
+	private	int 		addrRecordSize	=	7;
 	
 	Address_Data()
 	{
 		try 
 		{
-			File inFile = new File(“~/Documents/programming/java/NYU_Java/APP1/bin/address_database.txt”); 	//open file for reading
-			FileReader openFile  = new FileReader(inFile); 	//open file for reading
-			BufferedReader inBuffer  = new BufferedReader(openFile);									//buffer the input
-			address = new String[infile.length()];
-		
-			int i = 0;
-		
+			File inFile = new File("~/addrbook"); 	
+			FileReader openFile  = new FileReader(inFile); 	
+			BufferedReader inBuffer  = new BufferedReader(openFile);				//buffer the input
+			
+			int size = (int) inFile.length();
+			String [] temp_address = new String[size];
+				
 			while(true)
 			{
-				String input = inBuffer.readLine( );		//read a line
+				String input = inBuffer.readLine();		
 		
-				if (input == null)				//if input is null → end of file 
+				if (input == null)				
 					break;
 		
-				address[i++] = input;				//load address array with file
+				temp_address[addrBookSize++] = input;				
 			}
-			inFile.close( );
+			openFile.close();
+			
+			//copy temp array to final array while breaking apart each record into it's own array
+			
+			address = new String[addrBookSize][addrRecordSize];
+			int j = 0;
+			for (String record : temp_address)
+			{
+				if (record == null)
+					break;
+				String[] words = record.split(",");
+				for (int k=0; k<addrRecordSize; k++)
+				{
+					address[j][k] = words[k];
+				} 
+				j++;
+			}
 
 		}
-		catch (FileNotFoundException e)			//catch if input file does not exist
+		catch (FileNotFoundException e)			
 		{
-			System.err.println(“File not found ” + e );		//print exception message
+			System.err.println("File not found " + e);		
 		}
-		catch (IOException f)					//catch all other I/O exceptions
+		catch (IOException f)					
 		{
 			System.err.println(f);
-			e.printStackTrace(System.err);			//print program trace to error stream 
+			f.printStackTrace(System.err);			
 		}
 	}
-	public String [] getAddress()
+	public String [][] getAddress()
 	{
 		return (address);
 	}
+
+	public int getAddrBookSize()
+	{
+		return (addrBookSize);
+	}
+
+	public int getAddrRecordSize()
+	{
+		return (addrRecordSize);
+	}
 		
 	public String toString()
-	{
-		String data = Arrays.toString(address);
-		return (data);
+	{	
+		String text = new String("");
+		for (String [] data : address)
+		{
+			text+= Arrays.toString(data) + "\n";
+		}
+		return (text);
 	}
 	
 }

@@ -7,7 +7,13 @@ class Address_Data
 	private	int 		addrBookSize	=	0;
 	private	int 		addrRecordSize	=	7;
 	
+
 	Address_Data()
+	{
+		createAddressArray();
+	}
+
+	void createAddressArray()
 	{
 		try 
 		{
@@ -56,6 +62,8 @@ class Address_Data
 			f.printStackTrace(System.err);			
 		}
 	}
+
+	
 	public String [][] getAddress()
 	{
 		return (address);
@@ -80,5 +88,12 @@ class Address_Data
 		}
 		return (text);
 	}
-	
+
+	/*
+	public static void main(String[] args)
+	{
+		Address_Data temp = new Address_Data();
+		System.out.print(temp);
+	}
+	*/
 }

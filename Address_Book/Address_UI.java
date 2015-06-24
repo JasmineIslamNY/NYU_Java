@@ -12,11 +12,6 @@ public class Address_UI
 
 	public static void main(String[] args) 
 	{
-		
-		//Address works = new Address("Islam");
-		//System.out.print(works);
-
-
 		try 
 		{
 			InputStreamReader	kbd = new InputStreamReader(System.in);	 
@@ -53,9 +48,7 @@ public class Address_UI
 						record[3]+", "+record[4]+" "+record[5]+"\n");
 					System.out.print("Phone Number: "+record[6]+"\n");
 					System.out.println("");	
-				} 
-				//System.out.print(matchedRecords);
-				//screenBuf.println("You entered: " + input);						
+				} 					
 
 			
 		      	}									
@@ -66,5 +59,3 @@ public class Address_UI
 		}									
       	}
 }
-
-

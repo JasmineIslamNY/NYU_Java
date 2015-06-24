@@ -10,7 +10,12 @@ class Address
 
 	Address(String searchTerm)
 	{
-		searchString = searchTerm;
+		this.searchString = searchTerm;	
+		createSearchResult();	
+	}
+
+	void createSearchResult()
+	{
 		Address_Data book = new Address_Data();
 		this.addrRecordSize = book.getAddrRecordSize();
 		String [][] tempSearchResult = new String[book.getAddrBookSize()][book.getAddrRecordSize()];
@@ -39,9 +44,8 @@ class Address
 			searchResult = new String[1][1];
 			searchResult[0][0] = null;
 		}
-
+	
 	}
-
 
 	public String [][] getSearchResult()
 	{
@@ -67,4 +71,12 @@ class Address
 		}
 		return (text);
 	}
+
+	/*
+	public static void main(String[] args)
+	{
+		Address temp = new Address("Is");
+		System.out.print(temp);
+	}
+	*/
 }
